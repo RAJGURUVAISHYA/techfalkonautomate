@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
+    - cd frontend
+    - npm install
+    - npm run build
     - export DEPLOYPATH=/home/your_cpanel_username/public_html
-    - /bin/cp -r * $DEPLOYPATH
+    - /bin/cp -r dist/* $DEPLOYPATH
